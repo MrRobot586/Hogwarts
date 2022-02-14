@@ -1,0 +1,54 @@
+<div class="row">
+
+    <div class="col-xl-3 col-lg-4 col-md-6   mb-4" *ngFor="let character of characters">
+        <div class="bg-white rounded shadow-sm"><img src="{{ character.img }}" alt="{{ character.name }}_picture" ngbTooltip="{{ character.name }}" class="img-fluid card-img-top hideoverflow">
+            <div class="p-4">
+                <h5 class="text-center"><a href="#" class="text-dark"> {{ character.name }}</a></h5>
+                
+                <p class="text-center text-muted mb-0">
+                    <fa-icon [icon]="faHatWizard"></fa-icon>
+                    <span class="ms-2" [ngbTooltip]="Character_patronus" placement="end">{{ character.patronus }}</span>
+                    <ng-template #Character_patronus>
+                        <b>Patronus: </b> {{ character.patronus }}
+                    </ng-template>
+                </p>
+                
+                <hr class="mx-0">
+                
+                <p class="small text-muted mb-0"><span class="fw-bold">- Species:</span> {{ character.species }}</p>
+                <p class="small text-muted mb-0"><span class="fw-bold">- Gender:</span> {{ character.gender }} </p>
+                <p class="small text-muted mb-0"><span class="fw-bold">- Age:</span> {{ character.age }}</p>
+
+                <hr class="mx-0">
+
+                <div class="d-flex align-items-center justify-content-between rounded-pill bg-light shadow-sm px-3 py-2 mt-3">
+                    <p class="small mb-0">
+                        <fa-icon class="text-secondary fw-bold" [icon]="faHouse"></fa-icon>
+                        <span class="text-secondary fw-bold ms-2">House </span>
+                    </p>
+
+                    <ng-template #House_tooltip>
+                        <b>House: </b> {{ character.house }}
+                    </ng-template>
+
+                    <div class="badge bg-danger rounded-pill px-2 font-weight-normal" [ngbTooltip]="House_tooltip" *ngIf="character.house == 'Gryffindor'">
+                        {{ character.house }}
+                    </div>
+
+                    <div class="badge bg-success rounded-pill px-2 font-weight-normal" [ngbTooltip]="House_tooltip" *ngIf="character.house == 'Slytherin'">
+                        {{ character.house }}
+                    </div>
+
+                    <div class="badge bg-primary rounded-pill px-2 font-weight-normal" [ngbTooltip]="House_tooltip" *ngIf="character.house == 'Ravenclaw'">
+                        {{ character.house }}
+                    </div>
+
+                    <div class="badge bg-warning rounded-pill px-2 font-weight-normal" [ngbTooltip]="House_tooltip" *ngIf="character.house == 'Hufflepuff'">
+                        {{ character.house }}
+                    </div>
+                </div>
+            </div>
+        </div>
+      </div>
+</div>
+

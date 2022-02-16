@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Params } from '@angular/router';
 
 
-import { faHatWizard, faGraduationCap } from '@fortawesome/free-solid-svg-icons';
+import { faHatWizard, faGraduationCap, faUsers } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-page-header',
@@ -13,6 +13,7 @@ export class PageHeaderComponent implements OnInit {
 
   faHatWizard = faHatWizard;
   faGraduationCap = faGraduationCap;
+  faUsers = faUsers;
 
   public category!:string;
 
@@ -32,6 +33,7 @@ export class PageHeaderComponent implements OnInit {
       title_sufix: '',
       title: 'Hogwarts',
       sub_title: '',
+      icon: faHatWizard,
       house_selector: false,
       new_studet_apply: false
     };
@@ -39,11 +41,11 @@ export class PageHeaderComponent implements OnInit {
     switch (category) {
       case 'staff':
         composition.title_sufix = ' teachers';
-
         composition.sub_title = 'The most qualified staff';
         break;
         
       case 'students':
+        composition.icon = faGraduationCap;
         composition.title_sufix = ' students';
         composition.sub_title = 'Our most outstanding students';
         composition.new_studet_apply = true;
@@ -54,6 +56,7 @@ export class PageHeaderComponent implements OnInit {
       case 'Slytherin':
       case 'Ravenclaw':
       case 'Hufflepuff':
+        composition.icon = faUsers;
         composition.title_sufix = ' characters';
         composition.sub_title = 'List all the characters of the Harry Potter book series';
         composition.house_selector = true;

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { faArrowLeft, faCheck, faIdCard } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-student-application',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class StudentApplicationComponent implements OnInit {
 
+  faArrowLeft = faArrowLeft;
+  faCheck = faCheck;
+  faIdCard = faIdCard;
+  studentApply = localStorage.getItem('newStudentApplication');
+
   constructor() { }
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void { }
 
 }

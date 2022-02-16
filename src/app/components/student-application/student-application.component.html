@@ -1,3 +1,98 @@
-<section >
-    * Insertar formulario de inscripcion *
-</section>
+<div class="row">
+    <div class="col mt-5">
+        <button class="btn btn-primary" ngbTooltip="Back to home..." routerLink="/"><fa-icon [icon]="faArrowLeft"></fa-icon> Back</button>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col">
+        <form class="p-5 mt-4 mb-5 rounded shadow" *ngIf="!studentApply">
+            <div class="mb-3 text-center">
+                <h1>New student application</h1>
+                <p class="text-muted">Fill in the following form to join Hogwarts</p>
+                <hr>
+            </div>
+            <div class="mb-3">
+                <label for="fullname" class="form-label">Full name</label>
+                <input type="text" class="form-control" name="fullname" aria-describedby="erroralert-name" placeholder="Ex: Diego Oropeza">
+                <div id="erroralert-name" class="form-text text-danger">Alert en caso de que halla error.</div>
+            </div>  
+            <div class="mb-3">
+                <label for="gender" class="form-label">Gender</label>
+                <select class="form-select" aria-label="Default select" name="gender" aria-describedby="erroralert-gender">
+                    <option selected>Select your gender</option>
+                    <option value="1">Male</option>
+                    <option value="2">Famale</option>
+                    <option value="3">Not binary</option>
+                </select>
+                <div id="erroralert-gender" class="form-text text-danger">Alert en caso de que halla error.</div>
+            </div>
+            <div class="mb-3">
+                <label for="species" class="form-label">Species</label>
+                <input type="text" class="form-control" name="species" aria-describedby="erroralert-species" placeholder="Ex: Human">
+                <div id="erroralert-species" class="form-text text-danger">Alert en caso de que halla error.</div>
+            </div>
+            <div class="mb-3">
+                <label for="age" class="form-label">Age</label>
+                <input type="number" class="form-control" name="age" aria-describedby="erroralert-number" placeholder="Ex: 18">
+                <div id="erroralert-number" class="form-text text-danger">Alert en caso de que halla error.</div>
+            </div>
+            <div class="mb-3">
+                <label for="dateofbirth" class="form-label">Date of birth</label>
+                <input type="date" class="form-control" name="dateofbirth" aria-describedby="erroralert-birth">
+                <div id="erroralert-birth" class="form-text text-danger">Alert en caso de que halla error.</div>
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">Email address</label>
+                <input type="email" class="form-control" name="email" aria-describedby="erroralert-mail" placeholder="Ex: someone@gmail.com">
+                <div id="erroralert-mail" class="form-text text-danger">Alert en caso de que halla error.</div>
+            </div>
+            <div class="row">
+                <div class="col text-center">
+                    <button type="submit" class="btn btn-primary px-5">Submit</button>
+                </div>
+            </div>
+        </form>
+
+        <div *ngIf="studentApply">
+            <div class="alert alert-success my-4" role="alert">
+                <fa-icon [icon]="faCheck"></fa-icon> You have now applied to Hogwarts. You can view the status of your application below or return to the home page by clicking <a routerLink="/">here</a> 
+            </div>
+    
+            <div class="bg-dark text-white p-5 rounded shadow mb-5">
+                <h1 class="text-center"><fa-icon [icon]="faIdCard"></fa-icon><br>Your application</h1>
+                <hr>
+                <form class="bg-light p-3 rounded text-dark p-5 rounded">
+                    <div class="mb-3">
+                        <label for="fullname" class="form-label">Full name</label>
+                        <input type="text" class="form-control" name="fullname" disabled>
+                    </div>
+    
+                    <div class="mb-3">
+                        <label for="gender" class="form-label">Gender</label>
+                        <input type="text" class="form-control" name="gender" disabled>
+                    </div>
+                    <div class="mb-3">
+                        <label for="species" class="form-label">Species</label>
+                        <input type="text" class="form-control" name="species" disabled>
+                    </div>
+                    <div class="mb-3">
+                        <label for="age" class="form-label">Age</label>
+                        <input type="text" class="form-control" name="age" disabled>
+                    </div>
+                    <div class="mb-3">
+                        <label for="dateofbirth" class="form-label">Date of birth</label>
+                        <input type="text" class="form-control" name="dateofbirth" disabled>
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email address</label>
+                        <input type="text" class="form-control" name="email" disabled>
+                    </div>
+                    <hr>
+                    <h4 class="text-center">Status: <span class="text-primary">pending...</span></h4>
+                </form> 
+            </div>
+        </div>
+        
+    </div>
+</div>

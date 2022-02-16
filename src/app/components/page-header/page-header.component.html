@@ -2,7 +2,8 @@
     <div class="col-lg-12 mx-auto">
         <div class="text-white p-5 shadow-sm text-center rounded bg-dark">
             <h1>
-                <fa-icon [icon]="faHatWizard"></fa-icon><br>
+                <fa-icon [icon]="headerComposition(category).icon"></fa-icon>
+                <br>
                 {{ headerComposition(category).title_prefix + headerComposition(category).title + headerComposition(category).title_sufix }}
             </h1>
 
@@ -10,7 +11,7 @@
             
             <hr>
 
-            <button class="btn btn-primary" *ngIf="headerComposition(category).new_studet_apply" routerLink="/student-apply"><fa-icon [icon]="faGraduationCap"></fa-icon> Become a student</button>
+            <button class="btn btn-primary" *ngIf="headerComposition(category).new_studet_apply" routerLink="/student-apply">Become a student</button>
 
             <ul class="nav nav-pills justify-content-center" *ngIf="headerComposition(category).house_selector">
                 <li class="nav-item">

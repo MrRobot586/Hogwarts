@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-
 import { faHatWizard, faSearch } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
@@ -11,8 +10,8 @@ export class HeaderComponent implements OnInit {
 
   faHatWizard = faHatWizard;
   faSearch = faSearch;
-  
-  constructor() { }
 
-  ngOnInit(): void { }
+  constructor() { };
+
+  ngOnInit():void {  }
 }

@@ -1,10 +1,24 @@
-<!-- Header -->
 <div class="row py-5">
     <div class="col-lg-12 mx-auto">
         <div class="text-white p-5 shadow-sm text-center rounded bg-dark">
             <h1><fa-icon [icon]="faHatWizard"></fa-icon><br>Hogwarts</h1>
             <p class="lead text-muted">Witchcraft and sorcery school</p>
+            <hr>
+
+            <ul class="nav nav-pills justify-content-center">
+                <li class="nav-item">
+                    <a class="nav-link me-4" routerLink="/characters/house/Gryffindor" [routerLinkActive]="'active bg-danger'">Gryffindor</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link me-4" routerLink="/characters/house/Slytherin" [routerLinkActive]="'active bg-success'">Slytherin</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link me-4" routerLink="/characters/house/Ravenclaw" [routerLinkActive]="'active bg-primary'">Ravenclaw</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link me-4" routerLink="/characters/house/Hufflepuff" [routerLinkActive]="'active bg-warning'">Hufflepuff</a>
+                </li>  
+            </ul>
         </div>
     </div>
 </div>
-<!-- End -->

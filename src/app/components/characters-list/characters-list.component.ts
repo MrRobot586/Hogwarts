@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-
-import { faHatWizard,faHouseDamage } from '@fortawesome/free-solid-svg-icons';
+import { Character } from 'src/app/models/character.interface';
+import { HpApiServiceService } from 'src/app/services/hp-api-service.service';
+import { ActivatedRoute, Params } from '@angular/router';
 
 @Component({
   selector: 'app-characters-list',
@@ -9,18 +10,35 @@ import { faHatWizard,faHouseDamage } from '@fortawesome/free-solid-svg-icons';
 })
 export class CharactersListComponent implements OnInit {
 
-  faHatWizard = faHatWizard;
-  faHouse = faHouseDamage;
-
-  public characters = [
-    { name: 'Harry Potter', species: 'Human', gender: 'Male', age: '20', patronus: 'Stag', house: 'Gryffindor', img: 'http://hp-api.herokuapp.com/images/harry.jpg' },
-    { name: 'Draco Malfoy', species: 'Human', gender: 'Male', age: '20', patronus: 'Unknow', house: 'Slytherin', img: 'http://hp-api.herokuapp.com/images/draco.jpg' },
-    { name: 'Cho Chang', species: 'Human', gender: 'Famale', age: '20', patronus: 'Swan', house: 'Ravenclaw', img: 'http://hp-api.herokuapp.com/images/cho.jpg' },
-    { name: 'Cedric Diggory', species: 'Human', gender: 'Male', age: '20', patronus: 'Unknow', house: 'Hufflepuff', img: 'http://hp-api.herokuapp.com/images/cedric.png' }
-  ]
-  constructor() { }
+  public query!:string;
+  public characters!:Character[];
+  
+  constructor(private api:HpApiServiceService,  private route: ActivatedRoute) { }
 
   ngOnInit(): void {
+    this.route.params.subscribe((params: Params) => {
+      this.query = params['parm'] || '';
+      this.query = this.parseQuery(this.query);
+      this.api.getApiData(this.query).subscribe((data)=>{
+        this.characters = data;
+      });
+    });
+  }
+
+  parseQuery(ref = ''){
+    if(ref == 'students' || ref == 'staff' || ref == 'all'){
+      if(ref == 'all'){
+        return '';
+      }else{
+        return `/${ref}`;
+      }
+    }else{
+      if(ref == ''){
+        return ref;
+      }else{
+        return `/house/${ref}`;
+      }
+    }
   }
 
 }

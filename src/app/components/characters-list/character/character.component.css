@@ -1,0 +1,14 @@
+.hideoverflow {
+    overflow: hidden;
+    height: 330px;
+}
+
+.character_card {
+    transition: 0.5s ease;
+}
+
+.character_card:hover {
+    cursor: pointer;
+    transform: translateY(-10px) scale(1.02);
+	box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.45) !important;
+}

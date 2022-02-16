@@ -1,0 +1,13 @@
+.nav-link {
+    color: rgba(255,255,255,.55);
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out;
+}
+
+.nav-link:hover {
+    color: rgba(255,255,255,0.75);
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out;
+}
+
+.bg-danger, .bg-success, .bg-primary, .bg-warning {
+    color: #fafafa!important;
+}

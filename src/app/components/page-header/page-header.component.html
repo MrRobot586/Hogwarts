@@ -1,11 +1,18 @@
 <div class="row py-5">
     <div class="col-lg-12 mx-auto">
         <div class="text-white p-5 shadow-sm text-center rounded bg-dark">
-            <h1><fa-icon [icon]="faHatWizard"></fa-icon><br>Hogwarts</h1>
-            <p class="lead text-muted">Witchcraft and sorcery school</p>
+            <h1>
+                <fa-icon [icon]="faHatWizard"></fa-icon><br>
+                {{ headerComposition(category).title_prefix + headerComposition(category).title + headerComposition(category).title_sufix }}
+            </h1>
+
+            <p class="lead text-muted">{{ headerComposition(category).sub_title }}</p>
+            
             <hr>
 
-            <ul class="nav nav-pills justify-content-center">
+            <button class="btn btn-primary" *ngIf="headerComposition(category).new_studet_apply" routerLink="/student-apply"><fa-icon [icon]="faGraduationCap"></fa-icon> Become a student</button>
+
+            <ul class="nav nav-pills justify-content-center" *ngIf="headerComposition(category).house_selector">
                 <li class="nav-item">
                     <a class="nav-link me-4" routerLink="/characters/house/Gryffindor" [routerLinkActive]="'active bg-danger'">Gryffindor</a>
                 </li>

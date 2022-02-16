@@ -13,6 +13,7 @@ import { CharactersListComponent } from './components/characters-list/characters
 import { PageHeaderComponent } from './components/page-header/page-header.component';
 import { CharacterComponent } from './components/characters-list/character/character.component';
 import { HomeComponent } from './components/home/home.component';
+import { StudentApplicationComponent } from './components/student-application/student-application.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { HomeComponent } from './components/home/home.component';
     PageHeaderComponent,
     CharacterComponent,
     HomeComponent,
-    AgePipe
+    AgePipe,
+    StudentApplicationComponent
   ],
   imports: [
     BrowserModule,

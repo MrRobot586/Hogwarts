@@ -18,27 +18,11 @@ export class CharactersListComponent implements OnInit {
   ngOnInit(): void {
     this.route.params.subscribe((params: Params) => {
       this.query = params['parm'] || '';
-      this.query = this.parseQuery(this.query);
+      this.query = this.api.parseQuery(this.query);
       this.api.getApiData(this.query).subscribe((data)=>{
         this.characters = data;
       });
     });
-  }
-
-  parseQuery(ref = ''){
-    if(ref == 'students' || ref == 'staff' || ref == 'all'){
-      if(ref == 'all'){
-        return '';
-      }else{
-        return `/${ref}`;
-      }
-    }else{
-      if(ref == ''){
-        return ref;
-      }else{
-        return `/house/${ref}`;
-      }
-    }
   }
 
 }

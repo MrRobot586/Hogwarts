@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+
 import { faHatWizard, faSearch } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
@@ -8,8 +9,9 @@ import { faHatWizard, faSearch } from '@fortawesome/free-solid-svg-icons';
 })
 export class HeaderComponent implements OnInit {
 
-  faHatWizard = faHatWizard;
-  faSearch = faSearch;
+  // Font awesome incons
+  public faHatWizard = faHatWizard;
+  public faSearch = faSearch;
 
   constructor() { };
 

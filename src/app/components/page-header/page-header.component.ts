@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Params } from '@angular/router';
 
-
 import { faHatWizard, faGraduationCap, faUsers } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
@@ -11,10 +10,10 @@ import { faHatWizard, faGraduationCap, faUsers } from '@fortawesome/free-solid-s
 })
 export class PageHeaderComponent implements OnInit {
 
-  faHatWizard = faHatWizard;
-  faGraduationCap = faGraduationCap;
-  faUsers = faUsers;
-
+  public faHatWizard = faHatWizard;
+  public faGraduationCap = faGraduationCap;
+  public faUsers = faUsers;
+  
   public category!:string;
 
   constructor(private route:ActivatedRoute) {

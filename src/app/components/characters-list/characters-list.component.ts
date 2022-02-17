@@ -14,7 +14,9 @@ import { faArrowUp } from '@fortawesome/free-solid-svg-icons'
 })
 export class CharactersListComponent implements OnInit {
 
-  faArrowUp = faArrowUp;
+  // Font awesome icon
+  public faArrowUp = faArrowUp;
+
   public query!:string;
   public characters!:Character[];
 

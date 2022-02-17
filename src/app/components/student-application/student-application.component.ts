@@ -10,13 +10,14 @@ import { faArrowLeft, faCheck, faIdCard, faEye } from '@fortawesome/free-solid-s
 })
 export class StudentApplicationComponent implements OnInit {
 
-  faArrowLeft = faArrowLeft;
-  faEye = faEye;
-  faCheck = faCheck;
-  faIdCard = faIdCard;
+  // Font awesome icons
+  public faArrowLeft = faArrowLeft;
+  public faEye = faEye;
+  public faCheck = faCheck;
+  public faIdCard = faIdCard;
 
-  studentApply!:any;
-  newStudentApply!:FormGroup;
+  public studentApply!:any;
+  public newStudentApply!:FormGroup;
   
   constructor(private fb: FormBuilder ) {
     if(this.studentApply = localStorage.getItem('newStudentApplication')){

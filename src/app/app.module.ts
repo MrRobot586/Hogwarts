@@ -14,6 +14,7 @@ import { PageHeaderComponent } from './components/page-header/page-header.compon
 import { CharacterComponent } from './components/characters-list/character/character.component';
 import { HomeComponent } from './components/home/home.component';
 import { StudentApplicationComponent } from './components/student-application/student-application.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { StudentApplicationComponent } from './components/student-application/st
     NgbModule,
     AppRoutingModule,
     FontAwesomeModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

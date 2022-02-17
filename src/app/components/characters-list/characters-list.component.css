@@ -1,6 +1,7 @@
 html {
     scroll-behavior: smooth;
 }
+
 #GoUpbtn {
     position: fixed;
     bottom: 20px;

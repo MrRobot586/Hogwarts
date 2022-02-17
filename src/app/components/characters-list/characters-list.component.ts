@@ -50,9 +50,4 @@ export class CharactersListComponent implements OnInit {
     this.document.body.scrollTop = 0;
     this.document.documentElement.scrollTop = 0;
   }
-
-  onScrollDown():void{
-    
-  }
-
 }

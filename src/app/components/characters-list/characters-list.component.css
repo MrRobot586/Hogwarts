@@ -1,2 +1,15 @@
+html {
+    scroll-behavior: smooth;
+}
+#GoUpbtn {
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    font-size: 18px;
+    transition: all ease 0.5s;
+}
 
-
+#GoUpbtn:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.45);
+}

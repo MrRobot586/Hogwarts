@@ -19,14 +19,17 @@ export class CharactersListComponent implements OnInit {
 
   public query!:string;
   public characters!:Character[];
-
-  public GoUpbtn:boolean = false;
+  public GoUpbtn:boolean;
+  public apiLoadingData:boolean;
   
   constructor(
     private api:HpApiServiceService,
     private route: ActivatedRoute,
     @Inject(DOCUMENT) private document:Document
-  ) {}
+  ) {
+    this.GoUpbtn = false;
+    this.apiLoadingData = api.loading;
+  }
 
   ngOnInit(): void {
     this.route.params.subscribe((params: Params) => {
@@ -34,6 +37,7 @@ export class CharactersListComponent implements OnInit {
       this.query = this.api.parseQuery(this.query);
       this.api.getApiData(this.query).subscribe((data)=>{
         this.characters = data;
+        this.apiLoadingData = false;
       });
     });
   }

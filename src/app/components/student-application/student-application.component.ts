@@ -66,19 +66,19 @@ export class StudentApplicationComponent implements OnInit {
       let message = '';
       switch (condition) {
         case 'required':
-          message = 'Este campo es obligatorio!';
+          message = 'This field is required!';
           break;
 
         case 'email':
-          message = 'La direccion de email es invalida, por favor verifiquela!';
+          message = 'The email address is invalid, please verify it!';
           break;
 
         case 'minlength':
-          message = `El valor dado es demasiado corto! minimo ${this.newStudentApply.get(input)?.errors?.[condition].requiredLength} caracteres.`;
+          message = `The value given is too short! Must contain at least ${this.newStudentApply.get(input)?.errors?.[condition].requiredLength} characters.`;
           break;
       
         default:
-          message = 'Los datos suministrados son invalidos!';
+          message = 'The data provided is invalid!';
           break;
       }
       return message;

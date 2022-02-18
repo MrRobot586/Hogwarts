@@ -1,9 +1,86 @@
-<app-page-header></app-page-header>
-
 <section class="row">
     <div class="col mx-auto">
-        <div class="text-white p-5 shadow-sm text-center rounded bg-dark">
-            dasdas
+        <div class="p-5 shadow bg-dark rounded">
+           
+            <div class="text-white text-center">
+                <h1>
+                    <fa-icon [icon]="faAngular"></fa-icon><br>
+                    ¡Hello, this is my angular app!
+                </h1>
+                <p>This app was designed and built by Diego Oropeza in Angular 12.</p>
+                <hr class="my-4">
+            </div>
+
+            <div class="row">
+                <div class="col bg-white text-justify rounded rounded p-3 mx-2 my-4 mt-2 card-effect">
+                    <h3 class="text-center">About me</h3>
+                    <hr>
+                    <p>
+                        My name is Diego Oropeza, I'm 18 years old, I'm a Jr. web developer and I built this app using the Angular framework to apply as a web developer at WCS, Software Factory.<br><br>
+                        I finished my high school studies last year, graduating with the best grades as a computer technician, I consider myself a constant, perseverant and passionate person, who loves to learn new things and experiment, that's why I study programming self-taught since I was 15 years old, my first programming language was C and since 2021 I am training to be a full stack web developer.<br><br>
+                        Currently, I am learning my first framework which is angular and working hard to master my front-end web development skills.
+                    </p>
+                </div>
+
+                <div class="col bg-white text-justify rounded rounded p-3 mx-2 mb-4 mt-2 card-effect">
+                    <h3 class="text-center">About the app</h3>
+                    <hr>
+                    <p>
+                        It was a challenge, since I had never built such a big project using specifically a framework, in fact this is the first time I use one to build (of course I had already done many exercises in the courses I have taken on the subject) a complete project and I have just recently been learning it, so I had no experience... But using my knowledge and skills as a developer, I was able to build what you now see.<br><br>
+                        I built the app based on previous projects I had done to practice with pure JavaScript. I used bootstrap to style the page, added icons using the font-awesome package and the features, sections and pages I mapped out using my knowledge of HTML, CSS, Typescripy, JavaScript and OOP, plus KISS principles (a paradigm I always try to implement) and reactivity.
+                    </p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col bg-white text-justify rounded p-3 mx-2 my-4 mt-2  card-effect">
+                    <h3 class="text-center">How I built it</h3>
+                    <hr>
+                    <p>
+                        The application is divided into 3 main sections in which a list of the characters belonging to the saga of Harry Potter books is shown, as appropriate. There is a section for students, one for teachers and one where all the characters are shown where we can filter the list according to the house of wizardry we select in a navigation menu.<br>
+                        Internally, the application consists of 7 key components, which are displayed depending on the page or section in which the user is, using a service to obtain the data of the characters of a public api, which are displayed on the screen in individual cards, where certain characteristics of each character and their photograph are shown.<br>
+                        In the students section there is a button through which we can navigate to a new section in which we can apply to join the student body of Hogwarts school, in this section we can fill out a form and see the result in real time, once the form is sent then we can see our application and the status in which it is (this data is stored locally).<br>
+                        Each component is built with bootstrap for the CSS styles, some of them have icons (using the font-awesome package) and some of them are static like the navigation bar and the footer. I also added some effects and transitions to make the application dynamic and pleasing to the eye, almost all the elements are responsive (i.e. they change according to some data). Note, the application is in English to demonstrate my level in the language, but I also used the translator <a href="https://www.deepl.com/">DeepL</a> to make some translations, if not most of them.
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="row">
+                <div class="col bg-white text-justify rounded p-3 mx-2 my-4 mt-2 card-effect">
+                    <h3 class="text-center">Some details</h3>
+                    <hr>
+                    <p>
+                        I took the liberty of adding some details to make the application look better and more interactive, things like: Paths for each section, icons, bootstrap styles, transitions and effects.
+                        My favorite was a "go to top" button, when scrolling through a list of characters. With the help of the "NgBootstrap" package, I placed some tooltips and details that look nice and provide some extra information to the user to improve the experience. In the end it's the little details that give life to a project, that's my humble opinion.
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="row">
+                <div class="col bg-white text-justify rounded p-3 mx-2 my-4 mt-2 card-effect">
+                    <h3 class="text-center">Project features</h3>
+                    <hr>
+                    <ul>
+                        <li>Styles made with bootstrap</li>
+                        <li>Icons placed using Font awesome</li>
+                        <li>Reavtive forms</li>
+                        <li>Students, teachers and all characters section</li>
+                        <li>Customized routes for each page</li>
+                        <li>Reactive page header</li>
+                        <li>Use of pipes for data transformation</li>
+                    </ul>
+                </div>
+
+            </div>
+            
+            <hr class="my-4 text-white">
+
+            <div class="text-center">
+                <a class="btn btn-primary btn-lg" href="#" role="button"><fa-icon [icon]="faGithub"></fa-icon> Github</a>
+            </div>
+
         </div>
     </div>
 </section>

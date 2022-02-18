@@ -8,7 +8,9 @@ import { Character } from '../models/character.interface';
 })
 export class HpApiServiceService {
 
-  constructor(private http:HttpClient) { }
+  public loading!:boolean;
+
+  constructor(private http:HttpClient) { this.loading = true }
 
   parseQuery(ref = ''){
     if(ref == 'students' || ref == 'staff' || ref == 'all'){
@@ -29,5 +31,4 @@ export class HpApiServiceService {
   getApiData(query = ''){
     return this.http.get<Character[]>(environment.Base_api_URL + query);
   }
-  
 }

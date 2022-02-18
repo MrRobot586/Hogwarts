@@ -1,0 +1,7 @@
+.card-effect {
+    transition: all ease 0.5s;
+}
+.card-effect:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.45);
+}

@@ -60,11 +60,6 @@ export class PageHeaderComponent implements OnInit {
         composition.sub_title = 'List all the characters of the Harry Potter book series';
         composition.house_selector = true;
         break;
-    
-      default:
-        composition.title_prefix = 'Welcome to ';
-        composition.sub_title = 'Witchcraft and sorcery school';
-        break;
     }
 
     return composition;

@@ -19,6 +19,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { SearchFormComponent } from './components/header/search-form/search-form.component';
 import { SearchFilterPipe } from './pipes/search-filter.pipe';
 import { AgePipe } from './pipes/age.pipe';
+import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { AgePipe } from './pipes/age.pipe';
     AgePipe,
     StudentApplicationComponent,
     SearchFormComponent,
-    SearchFilterPipe
+    SearchFilterPipe,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,

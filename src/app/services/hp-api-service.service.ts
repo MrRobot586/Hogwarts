@@ -8,10 +8,10 @@ import { Character } from '../models/character.interface';
 })
 export class HpApiServiceService {
 
-  public loading:boolean;
   public search_input:string;
+  public sortBy:string;
 
-  constructor(private http:HttpClient) { this.loading = true; this.search_input = '' }
+  constructor(private http:HttpClient) { this.search_input = ''; this.sortBy = '' }
 
   parseQuery(ref = ''){
     if(ref == 'students' || ref == 'staff' || ref == 'all'){

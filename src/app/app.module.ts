@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
@@ -20,6 +21,7 @@ import { SearchFormComponent } from './components/header/search-form/search-form
 import { SearchFilterPipe } from './pipes/search-filter.pipe';
 import { AgePipe } from './pipes/age.pipe';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
+import { SortPipe } from './pipes/sort.pipe';
 
 @NgModule({
   declarations: [
@@ -34,9 +36,11 @@ import { PageNotFoundComponent } from './components/page-not-found/page-not-foun
     StudentApplicationComponent,
     SearchFormComponent,
     SearchFilterPipe,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    SortPipe
   ],
   imports: [
+    BrowserAnimationsModule,
     BrowserModule,
     NgbModule,
     AppRoutingModule,

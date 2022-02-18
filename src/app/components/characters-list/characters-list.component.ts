@@ -37,7 +37,6 @@ export class CharactersListComponent implements OnInit {
       this.query = this.api.parseQuery(this.query);
       this.api.getApiData(this.query).subscribe(data=>{
         this.characters = data;
-        this.api.loading = false;
       });
     });
   }

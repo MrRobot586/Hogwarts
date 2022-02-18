@@ -30,6 +30,6 @@ export class HpApiServiceService {
   }
   
   getApiData(query = ''){
-    return this.http.get<Character[]>(environment.Base_api_URL + query);
+    return this.http.get<Character[]>(environment.BaseApiUrl + query);
   }
 }

@@ -18,26 +18,25 @@ export class CharactersListComponent implements OnInit {
   public faArrowUp = faArrowUp;
 
   public query!:string;
-  public characters!:Character[];
+  public characters:Character[];
   public GoUpbtn:boolean;
-  public apiLoadingData:boolean;
   
   constructor(
-    private api:HpApiServiceService,
+    public api:HpApiServiceService,
     private route: ActivatedRoute,
     @Inject(DOCUMENT) private document:Document
   ) {
+    this.characters = [];
     this.GoUpbtn = false;
-    this.apiLoadingData = api.loading;
   }
 
   ngOnInit(): void {
     this.route.params.subscribe((params: Params) => {
       this.query = params['parm'] || '';
       this.query = this.api.parseQuery(this.query);
-      this.api.getApiData(this.query).subscribe((data)=>{
+      this.api.getApiData(this.query).subscribe(data=>{
         this.characters = data;
-        this.apiLoadingData = false;
+        this.api.loading = false;
       });
     });
   }

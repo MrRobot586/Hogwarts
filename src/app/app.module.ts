@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-import { AgePipe } from './pipes/age.pipe';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -15,6 +15,9 @@ import { CharacterComponent } from './components/characters-list/character/chara
 import { HomeComponent } from './components/home/home.component';
 import { StudentApplicationComponent } from './components/student-application/student-application.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { SearchFormComponent } from './components/header/search-form/search-form.component';
+import { SearchFilterPipe } from './pipes/search-filter.pipe';
+import { AgePipe } from './pipes/age.pipe';
 
 @NgModule({
   declarations: [
@@ -26,7 +29,9 @@ import { ReactiveFormsModule } from '@angular/forms';
     CharacterComponent,
     HomeComponent,
     AgePipe,
-    StudentApplicationComponent
+    StudentApplicationComponent,
+    SearchFormComponent,
+    SearchFilterPipe
   ],
   imports: [
     BrowserModule,
@@ -34,7 +39,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     AppRoutingModule,
     FontAwesomeModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,13 +1,13 @@
 <app-page-header></app-page-header>
 
 <section class="row">
-    <div class="container mx-auto text-center" *ngIf="apiLoadingData">
+    <div class="container mx-auto text-center" *ngIf="api.loading">
         <div class="loader" id="loader">
             Cargando datos, por favor espera...
         </div>
     </div>
 
-    <div class="col-xl-3 col-lg-4 col-md-6 mb-4" *ngFor="let character of characters">
+    <div class="col-xl-3 col-lg-4 col-md-6 mb-4" *ngFor="let character of (characters | searchFilter:api.search_input)">
         <app-character [character]="character"></app-character>
     </div>
 </section>

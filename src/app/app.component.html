@@ -4,6 +4,15 @@
 
 	<div class="container bg-white shadow rounded">
 		<div class="px-lg-5 py-lg-4">
+			<ngx-spinner
+				bdColor="rgba(51,51,51,0.6)"
+				size="medium"
+				color="#fff"
+				type="ball-scale-multiple"
+				>
+				<div class="loader"></div>
+				<p style="font-size: 20px; color: white">Loading...</p>
+			</ngx-spinner>
 			<router-outlet></router-outlet>
 		</div>
 	</div>

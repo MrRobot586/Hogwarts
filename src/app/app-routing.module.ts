@@ -10,8 +10,8 @@ const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: 'characters/house/:parm', component: CharactersListComponent },
   { path: 'characters/:parm', component: CharactersListComponent },
-  { path: 'student-apply', component: StudentApplicationComponent },
   { path: 'characters', redirectTo: 'characters/all' },
+  { path: 'student-apply', component: StudentApplicationComponent },
   { path: 'home', component: HomeComponent },
   { path: '**', component: PageNotFoundComponent }
 ];

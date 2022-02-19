@@ -1,6 +1,5 @@
 import { Component, HostListener, Inject, OnInit } from '@angular/core';
 import { ActivatedRoute, Params } from '@angular/router';
-import { NgxSpinnerService } from 'ngx-spinner';
 import { DOCUMENT } from '@angular/common';
 
 import { Character } from 'src/app/models/character.interface';
